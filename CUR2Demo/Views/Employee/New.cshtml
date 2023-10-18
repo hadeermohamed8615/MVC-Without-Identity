@@ -1,0 +1,21 @@
+﻿@model Employee//ViewModel[Department / Employee]
+@{
+    ViewData["Title"] = "New";
+    ViewBag.Link = "New";
+    ViewBag.id = "";
+
+}
+
+<h1>New</h1>
+
+
+    @*@Html.Partial("_EditAndNew")*@
+    @*@Html.PartialAsync("_EditAndNew")*@
+    @*@Html.RenderPartial("_EditAndNew")*@
+    <partial name="_EditAndNew"  />
+
+
+
+
+
+

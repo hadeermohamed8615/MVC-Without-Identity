@@ -1,0 +1,20 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Delete";
+   
+}
+
+<h1>Delete</h1>
+<form method="post" action="/Employee/Delete/@Model.Id">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="@Model.Image" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Salary</p>
+        <p class="card-text">@Model.Age</p>
+        <p class="card-text">@Model.Address</p>
+        <a href="/Employee/Index" class="btn btn-primary">Back to List</a>
+    </div>
+</div>
+<input type="Submit" value="Delete" class="btn btn-outline-danger" />
+</form>

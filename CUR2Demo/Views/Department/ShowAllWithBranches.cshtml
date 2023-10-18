@@ -1,0 +1,39 @@
+﻿@model Department
+@{
+    ViewData["Title"] = "ShowAllWithBranches";
+}
+
+<h1>ShowAllWithBranches</h1>
+
+
+
+
+<h1>@ViewData["str"]  @Model.Name</h1>
+<h1 style="color:@ViewData["color"]">@Model.Manger</h1>
+<h1>@ViewData["msg"]</h1>
+@*<h2>@(int.Parse(@ViewData["num"].ToString()) + @Model.Id)</h2>*@
+<h2>@(ViewBag.Num + Model.Id)</h2>
+<select>
+   @* @foreach (var i in (List<string>)ViewData["brc"])
+    {
+        <option>@i</option>
+    }*@
+
+    @foreach (var i in ViewBag.brc)
+    {
+        <option>@i</option>
+    }
+</select>
+
+
+
+
+<!--DisAdv ViewData
+1-Magig String
+2-casting
+-->
+<!--DisAdv ViewBag
+1-Magig String
+--------Adv
+--Dynamic
+-->

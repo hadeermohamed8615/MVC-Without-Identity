@@ -1,0 +1,19 @@
+﻿
+@model DeptWithBranchesAndMsgViewModel
+@{
+    ViewData["Title"] = "ShowAllWithBrancheswithVM";
+}
+
+<h1>ShowAllWithBrancheswithVM</h1>
+
+<h1>@Model.Num</h1>
+
+<select>
+    @foreach(var b in Model.Branches)
+    {
+        <option>@b</option>
+    }
+</select>
+
+<h3 style="color:@Model.Color">@Model.DeptMGR</h3> 
+<h1>@Model.DeptName</h1>

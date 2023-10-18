@@ -1,0 +1,52 @@
+﻿@model List<Employee>
+@{
+    ViewData["Title"] = "Index";
+   // Layout = "_Layout";
+}
+
+<h1>Index</h1>
+@*@section Div1{
+    <div>Index</div>
+}*@
+
+<br />
+<a href="/Employee/New" class="btn btn-outline-secondary">New</a>
+<br />
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Age</th>
+            <th scope="col">Image</th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <th>@d.Id</th>
+                <td>@d.Name</td>
+                <td>@d.Address</td>
+                <td>@d.Salary</td>
+                <td>@d.Age</td>
+                <td>@d.Image</td>
+                <td>
+                    @Html.ActionLink("Edit","Edit","Employee",new{Id=d.Id},new{@class="btn btn-outline-info"})
+                    @*@Html.ActionLink("Edit","Edit","Employee",null,new{@class="btn btn-outline-info"})*@
+                    @*<a href="/Employee/Edit/@d.Id" class="btn btn-outline-info">Edit</a>*@</td>
+                <td><a href="/Employee/Details/@d.Id" class="btn btn-outline-success">Details</a></td>
+                <td><a href="/Employee/Delete/@d.Id" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+﻿
+
+<partial name="_HeaderPartailView" />
+
+<div style="">
+<div class="card-header" style="height:20%;width:100%;background-color:aqua">
+        Header
+</div >
+
+    <div style="height:55%;width:100%;background-color:burlywood">
+     <!--Begin Content-->
+@RenderBody()
+<!--End Content-->
+</div>
+
+    <div class="footer" style="height:20%;width:100%;background-color:antiquewhite">
+     Footer
+ </div>
+
+</div>
+@RenderSection("Scripts",false)
